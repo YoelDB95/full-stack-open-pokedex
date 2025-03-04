@@ -49,5 +49,8 @@ module.exports = {
       template: "./public/index.html",
       filename: "./index.html",
     }),
+    new webpack.DefinePlugin({
+      'process.env.PORT': JSON.stringify(process.env.PORT),
+    }),
   ],
 };

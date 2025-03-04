@@ -16,9 +16,7 @@ module.exports = {
     'sourceType': 'module'
   },
   'plugins': [
-    'react', 'jest', new webpack.DefinePlugin({
-      'process.env.PORT': JSON.stringify(process.env.PORT),
-    }),
+    'react', 'jest'
   ],
   'rules': {
     'no-console': 'off',
