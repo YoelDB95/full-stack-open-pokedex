@@ -54,5 +54,10 @@ jobs:
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           title: 'New version of pokedex is ready!'
-          description: ' Version `${{github.event.release.tag_name}}`'
           color: 0x008001
+      - uses: sarisia/actions-status-discord@v1
+        if: !success()
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          title: 'Error: something failed!'
+          color: 0xff0000
