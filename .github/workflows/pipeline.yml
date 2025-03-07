@@ -55,4 +55,4 @@ jobs:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           title: 'New version of pokedex is ready!'
           description: ' Version `${{github.event.release.tag_name}}`'
-          color: 0x008000
+          color: 0x008001
